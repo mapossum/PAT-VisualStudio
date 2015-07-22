@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49367D7D-4DAF-4DF7-9B49-3360C164D841}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Protected_Area_Tools</RootNamespace>
+    <AssemblyName>Protected Area Tools</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Protected Area Tools.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Protected Area Tools.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AnalysisTools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoUI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Catalog, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CatalogUI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ConversionTools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Desktop.AddIns">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialAnalystTools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialStatisticsTools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>.\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Combine_Marxan.vb" />
+    <Compile Include="Config.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Config.esriaddinx</DependentUpon>
+    </Compile>
+    <Compile Include="ConverttoMatrix.vb" />
+    <Compile Include="ERS_CLICKER_FORM.Designer.vb">
+      <DependentUpon>ERS_CLICKER_FORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ERS_CLICKER_FORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ERS_Code.vb" />
+    <Compile Include="ERS_FORM.Designer.vb">
+      <DependentUpon>ERS_FORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ERS_FORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ERS_REC.vb" />
+    <Compile Include="HEXGEN_Code.vb" />
+    <Compile Include="HEXGEN_FORM.designer.vb">
+      <DependentUpon>HEXGEN_FORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HEXGEN_FORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputFile.designer.vb">
+      <DependentUpon>InputFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InputFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JoinDiplayOutput.vb" />
+    <Compile Include="MARXAN_1_FORM.designer.vb">
+      <DependentUpon>MARXAN_1_FORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MARXAN_1_FORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MARXAN_CLICKER.designer.vb">
+      <DependentUpon>MARXAN_CLICKER.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MARXAN_CLICKER.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MARXAN_JOIN_FORM.designer.vb">
+      <DependentUpon>MARXAN_JOIN_FORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MARXAN_JOIN_FORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MARXAN_PREP_FORM.designer.vb">
+      <DependentUpon>MARXAN_PREP_FORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MARXAN_PREP_FORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDS_Code.vb" />
+    <Compile Include="MDS_Form.designer.vb">
+      <DependentUpon>MDS_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDS_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MIG_Code.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="M_COMBINE_FORM.designer.vb">
+      <DependentUpon>M_COMBINE_FORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="M_COMBINE_FORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M_TARGET_PREP.vb" />
+    <Compile Include="PATSettings.designer.vb">
+      <DependentUpon>PATSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PATSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessUpdate.Designer.vb">
+      <DependentUpon>ProcessUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RBI_CLICKER.designer.vb">
+      <DependentUpon>RBI_CLICKER.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RBI_CLICKER.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RBI_Code.vb" />
+    <Compile Include="RBI_FORM.designer.vb">
+      <DependentUpon>RBI_FORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RBI_FORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RBI_REC.vb" />
+    <Compile Include="RMATX_FORM.designer.vb">
+      <DependentUpon>RMATX_FORM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RMATX_FORM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunInedit.vb" />
+    <Compile Include="RunMarxan.vb" />
+    <Compile Include="Settings.vb" />
+    <Compile Include="type_defs.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ERS_CLICKER_FORM.resx">
+      <DependentUpon>ERS_CLICKER_FORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERS_FORM.resx">
+      <DependentUpon>ERS_FORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HEXGEN_FORM.resx">
+      <DependentUpon>HEXGEN_FORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputFile.resx">
+      <DependentUpon>InputFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MARXAN_1_FORM.resx">
+      <DependentUpon>MARXAN_1_FORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MARXAN_CLICKER.resx">
+      <DependentUpon>MARXAN_CLICKER.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MARXAN_JOIN_FORM.resx">
+      <DependentUpon>MARXAN_JOIN_FORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MARXAN_PREP_FORM.resx">
+      <DependentUpon>MARXAN_PREP_FORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDS_Form.resx">
+      <DependentUpon>MDS_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M_COMBINE_FORM.resx">
+      <DependentUpon>M_COMBINE_FORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PATSettings.resx">
+      <DependentUpon>PATSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessUpdate.resx">
+      <DependentUpon>ProcessUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBI_CLICKER.resx">
+      <DependentUpon>RBI_CLICKER.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBI_FORM.resx">
+      <DependentUpon>RBI_FORM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMATX_FORM.resx">
+      <DependentUpon>RMATX_FORM.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <AddInContent Include="Images\HEXGEN.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AddInContent>
+    <AddInContent Include="Images\M_TARGET_PREP.png" />
+    <AddInContent Include="Images\MIG_Code.png" />
+    <AddInContent Include="Images\Combine_Marxan.png" />
+    <AddInContent Include="Images\ConverttoMatrix.png" />
+    <AddInContent Include="Images\RunInedit.png" />
+    <AddInContent Include="Images\RunMarxan.png" />
+    <AddInContent Include="Images\JoinDiplayOutput.png" />
+    <Content Include="Protected Area Tools.dll.local">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Config.esriaddinx">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>ArcGISAddInHostGenerator</Generator>
+      <LastGenOutput>Config.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </AddInContent>
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\Protected Area Tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="ESRI.ArcGIS.ArcMapUI">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\ERS.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AddInContent>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AddInContent Include="Images\ERS.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AddInContent>
+    <AddInContent Include="Images\MDS_Code.png" />
+    <AddInContent Include="Images\PAT.png" />
+    <AddInContent Include="Images\RBI_Code.png" />
+    <AddInContent Include="Images\Settings.png" />
+    <Content Include="Ionic.Zip.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PATInfo\paths.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <ZipFileExtension>esriAddIn</ZipFileExtension>
+    <AddInTargetProduct>Desktop</AddInTargetProduct>
+    <AddInTargetVersion>10.0</AddInTargetVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\ESRI\ESRI.ArcGIS.AddIns.targets" Condition="Exists('$(MSBuildExtensionsPath)\ESRI\ESRI.ArcGIS.AddIns.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild">
+    <!-- Gives build warning when add-in targets file is not found. -->
+    <Warning Text="Unable to create .esriAddin; missing ESRI ArcGIS Add-in SDK component(s)." Condition="!Exists('$(MSBuildExtensionsPath)\ESRI\ESRI.ArcGIS.AddIns.targets')" />
+  </Target>
+  <ProjectExtensions>
+    <!-- Default ESRI add-in properties -->
+    <ESRIAddInProperties>
+      <Host>ArcMap</Host>
+    </ESRIAddInProperties>
+  </ProjectExtensions>
+</Project>
